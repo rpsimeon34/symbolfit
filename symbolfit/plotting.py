@@ -100,7 +100,7 @@ def plot_single_syst_single_func_1D(
             axes[0].errorbar(
                 x.flatten(),
                 y.flatten(),
-                yerr=[y_down.flatten(), y_up.flatten()],
+                yerr=[(y-y_down).flatten(), (y_up-y).flatten()],
                 xerr=bin_widths_1d.flatten() / 2,
                 fmt=".",
                 c="black",
@@ -113,7 +113,7 @@ def plot_single_syst_single_func_1D(
             axes[0].errorbar(
                 x.flatten(),
                 y.flatten(),
-                yerr=[y_down.flatten(), y_up.flatten()],
+                yerr=[(y-y_down).flatten(), (y_up-y).flatten()],
                 fmt=".",
                 c="black",
                 ecolor="grey",
@@ -568,7 +568,7 @@ def plot_total_unc_coverage_single_func_1D(
             axes[0].errorbar(
                 x.flatten(),
                 y.flatten(),
-                yerr=[y_down.flatten(), y_up.flatten()],
+                yerr=[(y-y_down).flatten(), (y_up-y).flatten()],
                 xerr=bin_widths_1d.flatten() / 2,
                 fmt=".",
                 c="black",
@@ -581,7 +581,7 @@ def plot_total_unc_coverage_single_func_1D(
             axes[0].errorbar(
                 x.flatten(),
                 y.flatten(),
-                yerr=[y_down.flatten(), y_up.flatten()],
+                yerr=[(y-y_down).flatten(), (y_up-y).flatten()],
                 fmt=".",
                 c="black",
                 ecolor="grey",
